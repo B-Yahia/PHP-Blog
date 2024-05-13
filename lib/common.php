@@ -95,7 +95,7 @@ function createUser(mysqli $conn, array $userData)
 
 function tryLogin(mysqli $mysqli, string $username, string $password)
 {
-    $sql = "SELECT password FROM user WHERE username = ?";
+    $sql = "SELECT password FROM user WHERE username = ? and is_enable = 1";
     $stmt = $mysqli->prepare($sql);
     if ($stmt === false) {
         throw new Exception('Cannot prepare statement to insert comment');
@@ -145,14 +145,10 @@ function getAuthUserId(mysqli $mysqli)
 
 function deletePostById(mysqli $mysqli, int $id)
 {
-    $stmt = $mysqli->prepare(
-        'DELETE FROM post WHERE id = ?'
-    );
-    $stmt->bind_param("i", $id);
-    try {
+    $queries = array("DELETE FROM comment WHERE post_id=?", "DELETE FROM post WHERE id = ?");
+    foreach ($queries as $query) {
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param("i", $id);
         $result = $stmt->execute();
-    } catch (Exception $e) {
-        echo $e->getMessage();
     }
-    dd($result);
 }
