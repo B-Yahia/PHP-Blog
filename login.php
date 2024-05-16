@@ -1,5 +1,7 @@
 <?php
 require_once 'lib/common.php';
+require "env.php";
+
 $username = '';
 
 session_start();

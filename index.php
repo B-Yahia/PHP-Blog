@@ -1,6 +1,6 @@
 <?php
 require_once "lib/common.php";
-
+require_once "env.php";
 
 session_start();
 $conn = getConnectionInst();

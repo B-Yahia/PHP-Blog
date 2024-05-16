@@ -3,6 +3,7 @@
 declare(strict_types=1);
 require_once "lib/common.php";
 require_once "lib/view-post.php";
+require_once "env.php";
 
 
 session_start();

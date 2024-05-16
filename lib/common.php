@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 function dd(mixed $value)
 {
     echo "<pre>";
@@ -9,10 +6,7 @@ function dd(mixed $value)
     echo "</pre>";
     die();
 }
-function getConnectionInst()
-{
-    return new mysqli("localhost", "yaya", "Dieuest1.", "BlogDB");
-}
+
 function htmlEscape($html)
 {
     return htmlspecialchars($html, ENT_HTML5, 'UTF-8');
@@ -95,7 +89,7 @@ function createUser(mysqli $conn, array $userData)
 
 function tryLogin(mysqli $mysqli, string $username, string $password)
 {
-    $sql = "SELECT password FROM user WHERE username = ? and is_enable = 1";
+    $sql = "SELECT password FROM user WHERE username = ? and is_enabled = 1";
     $stmt = $mysqli->prepare($sql);
     if ($stmt === false) {
         throw new Exception('Cannot prepare statement to insert comment');

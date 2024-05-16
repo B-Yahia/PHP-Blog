@@ -1,5 +1,6 @@
 	<?php
     require_once 'lib/common.php';
+    require_once "env.php";
     require_once 'lib/edit-post.php';
     require_once 'lib/view-post.php';
 
@@ -20,7 +21,6 @@
     }
 
     if ($_POST) {
-        // Validate these first
         $title = $_POST['post-title'];
         if (!$title) {
             $errors[] = 'The post must have a title';
