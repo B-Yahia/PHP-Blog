@@ -28,12 +28,22 @@ composer install
   - **Username** : `admin1`
   - **Password** : `password`
 
+## Deployment
+
+The app is now deployed on my VPS, and you can try it at:
+[http://45.137.148.234:8081/](http://45.137.148.234:8081/)
+
+To log in and explore all functionalities, use the following credentials:
+
+  Username: `admin1`
+  Password: `password`
 
 ## Configuring a Virtual Host
 
 If you need to configure a virtual host to deploy this application, you can follow the instructions provided in the README file of the [linux-apache-virtual-host-setup](https://github.com/B-Yahia/linux-apache-virtual-host-setup) repository.
 
 ## Requirements
+
   - PHP 7.4+
   - MySQL
   - Composer
