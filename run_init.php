@@ -40,7 +40,7 @@ if (
 $numOfUsersInUserTable = $conn->query("select count(id) from user");
 
 if ($checkIfUserTablesExsitResult->num_rows > 0 && $numOfUsersInUserTable->fetch_assoc()["count(id)"] < 2) {
-    array_push($msg, "Admin user account has been created");
+    array_push($msg, "Admin user account has been created with credantiels (admin1-password)");
     $error = array_merge($error, createUser($conn, array(
         'username' => 'admin1',
         'password' => password_hash('password', PASSWORD_DEFAULT)
