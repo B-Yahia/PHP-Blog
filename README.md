@@ -21,11 +21,11 @@ git clone https://github.com/B-Yahia/PHP-Blog.git
   - **Password** : `password`
 
 
-### Configuring a Virtual Host
+## Configuring a Virtual Host
 
 If you need to configure a virtual host to deploy this application, you can follow the instructions provided in the README file of the [linux-apache-virtual-host-setup](https://github.com/B-Yahia/linux-apache-virtual-host-setup) repository.
 
-###Requirements
+## Requirements
   - PHP 7.4+
   - MySQL
   - Composer
