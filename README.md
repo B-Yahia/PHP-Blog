@@ -9,9 +9,9 @@ This is a simple blog application built using PHP, created to familiarize with t
 ## Installation 
 1. clone the repository 
 
-'''
+```
 git clone https://github.com/B-Yahia/PHP-Blog.git  
-'''
+```
 2. Create a MySQL database.
 
 3. Run the SQL script available in `lib/init.sql` to create the required tables.
